@@ -4,6 +4,8 @@ services:
   osticket-app:
     image: tiredofit/osticket
     container_name: osticket-app
+    ports:
+      - "80:80"
     labels:
       - traefik.enable=true
       - traefik.frontend.rule=Host:url.example.com
